@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <h1> <%= kindOfDay %></h1> <br>
+
+<section class="card">
+    <h2>To-Do List</h2>
+    <ul>
+       
+        <% for(var i=0;i<listItems.length;i++) { %>
+        <input type="checkbox"><span class="strikethrough"><%= listItems[i].name %></span></input> <br>
+        <% } %>
+        </ul>
+        
+        <form action="/" method="POST">
+            <input type="text" name="new-item">
+            <button type="submit">+</button>
+        </form>
+</section>
+
+
+</body>
+</html>
